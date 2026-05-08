@@ -17,16 +17,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Video Modal Logic
   const videoModal = document.getElementById('video-modal');
-  const videoElement = videoModal ? videoModal.querySelector('video') : null;
+  const modalContainer = videoModal ? videoModal.querySelector('.modal-content') : null;
   const modalClose = videoModal ? videoModal.querySelector('.modal-close') : null;
 
   document.querySelectorAll('.project-visual').forEach(visual => {
     visual.addEventListener('click', () => {
+      const youtubeId = visual.dataset.youtube;
       const videoSrc = visual.querySelector('source') ? visual.querySelector('source').src : null;
-      if (videoSrc && videoModal && videoElement) {
-        videoElement.src = videoSrc;
+      
+      if (videoModal && modalContainer) {
+        // Clear previous content except close button
+        const closeBtn = modalContainer.querySelector('.modal-close');
+        modalContainer.innerHTML = '';
+        modalContainer.appendChild(closeBtn);
+
+        if (youtubeId) {
+          const iframe = document.createElement('iframe');
+          iframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1`;
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.setAttribute('allow', 'autoplay; encrypted-media');
+          iframe.style.width = '100%';
+          iframe.style.aspectRatio = '16/9';
+          iframe.style.borderRadius = '12px';
+          iframe.style.border = 'none';
+          modalContainer.appendChild(iframe);
+        } else if (videoSrc) {
+          const video = document.createElement('video');
+          video.src = videoSrc;
+          video.controls = true;
+          video.autoplay = true;
+          video.style.width = '100%';
+          video.style.borderRadius = '12px';
+          modalContainer.appendChild(video);
+        }
         videoModal.classList.add('active');
-        videoElement.play();
       }
     });
   });
@@ -34,7 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (modalClose) {
     modalClose.addEventListener('click', () => {
       videoModal.classList.remove('active');
-      videoElement.pause();
+      if (modalContainer) {
+        const closeBtn = modalContainer.querySelector('.modal-close');
+        modalContainer.innerHTML = '';
+        modalContainer.appendChild(closeBtn);
+      }
     });
   }
 
