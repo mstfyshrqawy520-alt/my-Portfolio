@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Learning Projects | Mostafa Elsharqawi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Mostafa<span class="accent-text">.AI</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">All Domains</a>
+        <a href="assets/files/Mostafa_Elsharqawi-CV_1.pdf" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;" download>Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" style="min-height: 40vh; display: flex; align-items: center; background: linear-gradient(rgba(10, 10, 20, 0.8), rgba(10, 10, 20, 0.8)), url('dl_hero_image_1778011490568.png'); background-size: cover; background-position: center;">
+    <div class="container reveal">
+      <h1 style="font-size: clamp(2rem, 5vw, 3.5rem);">Deep <span class="accent-text">Learning</span> Projects</h1>
+      <p style="max-width: 600px; color: var(--text-secondary);">Neural networks, CNNs, and advanced architectures engineered for high-dimensional data processing.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="projects-grid">
+        
+        <!-- Project 1: Neural Networks Collection -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/nn.png" alt="Neural Networks" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">CNN • PyTorch</span>
+            <h3>Neural Networks Collection</h3>
+            <p>A comprehensive collection of neural network architectures, from simple MLPs to complex CNNs, optimized for digit recognition and pattern classification.</p>
+            <div class="project-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">Keras</span>
+              <span class="tag">MNIST</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/digit-recognition-cnn" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="nncollection" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: House Rent ANN -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">Deep Regression • ANN</span>
+            <h3>House Rent Prediction (ANN)</h3>
+            <p>Multi-layered artificial neural network designed to predict rental prices by learning non-linear relationships in urban housing datasets.</p>
+            <div class="project-tags">
+              <span class="tag">TensorFlow</span>
+              <span class="tag">ANN</span>
+              <span class="tag">Dropout</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/House-Rent-Price-Prediction-ANN" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="houserent" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/House.png" alt="ANN Prediction" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Mostafa Elsharqawi. Engineered for the future of AI.</p>
+    </div>
+  </footer>
+
+  <div id="info-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="info-modal-close">&times;</span>
+      <div id="project-details-content">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

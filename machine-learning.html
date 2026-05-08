@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning Projects | Mostafa Elsharqawi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Mostafa<span class="accent-text">.AI</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">All Domains</a>
+        <a href="assets/files/Mostafa_Elsharqawi-CV_1.pdf" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;" download>Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" style="min-height: 40vh; display: flex; align-items: center; background: linear-gradient(rgba(10, 10, 20, 0.8), rgba(10, 10, 20, 0.8)), url('ml_hero_image_1778011196233.png'); background-size: cover; background-position: center;">
+    <div class="container reveal">
+      <h1 style="font-size: clamp(2rem, 5vw, 3.5rem);">Machine <span class="accent-text">Learning</span> Projects</h1>
+      <p style="max-width: 600px; color: var(--text-secondary);">Predictive modeling, regression, and classification systems engineered for accuracy and explainability.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="projects-grid">
+        
+        <!-- Project 1: House Rent -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/House.png" alt="House Rent Prediction" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">Regression • ANN</span>
+            <h3>House Rent Prediction</h3>
+            <p>A multi-layered Artificial Neural Network (ANN) optimized to predict rental prices based on complex feature sets including location, amenities, and market trends.</p>
+            <div class="project-tags">
+              <span class="tag">Keras</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Pandas</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/House-Rent-Price-Prediction-ANN" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="houserent" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Wine Quality -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">Classification • RF</span>
+            <h3>Wine Quality Analytics</h3>
+            <p>Advanced classification system utilizing Random Forest and Gradient Boosting to predict wine quality grades with high precision across chemical composition data.</p>
+            <div class="project-tags">
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">Seaborn</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/wine-quality-ml" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="winequality" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/wine.png" alt="Wine Quality" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Project 3: Breast Cancer -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/bre.png" alt="Breast Cancer" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">Healthcare • SVM</span>
+            <h3>Breast Cancer Detection</h3>
+            <p>Medical diagnostic tool implementing Support Vector Machines and Logistics Regression to classify tumors as malignant or benign with a focus on recall metrics.</p>
+            <div class="project-tags">
+              <span class="tag">MLflow</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Feature Eng</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/breast-cancer-classification-ml" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="breastcancer" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Glioma Tumor -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">Vision • Clustering</span>
+            <h3>Glioma Tumor Grading</h3>
+            <p>Sophisticated grading system for glioma tumors using radiomic features and unsupervised learning techniques to identify tumor stages and progression.</p>
+            <div class="project-tags">
+              <span class="tag">OpenCV</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Medical AI</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/glioma-tumor-grading-ml" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="glioma" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/Glioma.png" alt="Glioma Tumor" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Project 5: Credit Customers -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/credit.png" alt="Credit Risk" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">FinTech • XGBoost</span>
+            <h3>Customer Risk Profiling</h3>
+            <p>End-to-end risk analysis system for banking customers. Uses behavioral data to predict default probability and segment customers by risk level.</p>
+            <div class="project-tags">
+              <span class="tag">Imbalanced Data</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">XGBoost</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/credit-customers-risk-analysis" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="customerrisk" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Mostafa Elsharqawi. Engineered for the future of AI.</p>
+    </div>
+  </footer>
+
+  <div id="info-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="info-modal-close">&times;</span>
+      <div id="project-details-content">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Add scroll reveal logic specifically for this page since we are using JS reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
