@@ -100,6 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Info Modal Logic
   const projectData = {
+    localgpt: {
+      title: 'LocalGPT — Private Document Intelligence',
+      description: 'An advanced AI and Machine Learning platform allowing users to chat with, summarize, and extract insights from documents locally.',
+      challenges: ['Ensuring 100% data privacy.', 'Implementing a hybrid search engine (BM25 + Semantic).', 'Integrating local open-source LLMs.'],
+      tech: ['Next.js', 'FastAPI', 'Ollama', 'LanceDB', 'Docker'],
+      metrics: { 'Privacy': '100%', 'Retrieval': 'Hybrid', 'Deployment': 'Local' },
+      architecture: '<p>System: Next.js Frontend ↔ FastAPI Backend ↔ RAG Pipeline (LanceDB) ↔ Local LLMs (Ollama).</p>'
+    },
     hiremind: {
       title: 'Hire-Mind — AI Recruitment Intelligence',
       description: 'A production-grade recruitment platform leveraging RAG and semantic search to revolutionize candidate matching.',
