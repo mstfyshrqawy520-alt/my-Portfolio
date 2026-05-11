@@ -214,7 +214,7 @@ nav.scrolled {
 
 @media (max-width: 968px) {
   .hero-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
     padding-top: 2rem;
   }
@@ -1285,7 +1285,7 @@ footer {
     padding: 2rem;
   }
   .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 }
 
