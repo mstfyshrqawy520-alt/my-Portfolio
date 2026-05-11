@@ -197,6 +197,7 @@ nav.scrolled {
 
 .hero-text {
   flex: 1;
+  width: 100%;
   max-width: 650px;
 }
 
