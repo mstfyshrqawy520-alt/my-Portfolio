@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-dark: #020617;
-  --bg-card: rgba(15, 23, 42, 0.6);
-  --accent: #6366f1;
-  --accent-glow: rgba(99, 102, 241, 0.5);
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  --bg-dark: #ffffff;
+  --bg-card: #ffffff;
+  --accent: #2563eb;
+  --accent-glow: transparent;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
   --text-muted: #64748b;
-  --border: rgba(255, 255, 255, 0.08);
-  --glass-bg: rgba(30, 41, 59, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --border: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: #ffffff;
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.3s ease;
 }
 
 * {
@@ -28,9 +28,6 @@ html {
 
 body {
   background-color: var(--bg-dark);
-  background-image: 
-    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(192, 132, 252, 0.05) 0%, transparent 40%);
   color: var(--text-primary);
   font-family: var(--font-body);
   line-height: 1.6;
@@ -60,7 +57,7 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-secondary);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   transition: all 0.3s ease;
 }
 
@@ -121,9 +118,7 @@ h1, h2, h3, h4 {
 }
 
 .accent-text {
-  background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--accent);
 }
 
 /* Navigation */
@@ -139,9 +134,9 @@ nav {
 }
 
 nav.scrolled {
-  background: rgba(2, 6, 23, 0.8);
+  background: #ffffff;
   padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid transparent;
 }
 
 .nav-inner {
@@ -247,7 +242,7 @@ nav.scrolled {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  border: 1px solid transparent;
   border-radius: 100px;
   color: var(--accent);
   font-size: 0.85rem;
@@ -298,18 +293,18 @@ nav.scrolled {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   color: var(--text-primary);
 }
 
 .btn-outline:hover {
-  background: var(--border);
-  border-color: var(--text-secondary);
+  background: transparent;
+  border-color: var(--text-muted);
 }
 
 /* Section Common */
@@ -363,7 +358,7 @@ nav.scrolled {
   gap: 3rem;
   align-items: center;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: 24px;
   overflow: hidden;
   padding: 3rem;
@@ -372,7 +367,8 @@ nav.scrolled {
 
 .project-card:hover {
   border-color: var(--accent);
-  background: rgba(15, 23, 42, 0.8);
+  background: #ffffff;
+  box-shadow: 0 20px 40px transparent;
 }
 
 .project-visual {
@@ -380,8 +376,8 @@ nav.scrolled {
   border-radius: 16px;
   overflow: hidden;
   aspect-ratio: 16/9;
-  background: #000;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  background: #ffffff;
+  box-shadow: 0 20px 40px transparent;
   cursor: pointer;
 }
 
@@ -417,11 +413,11 @@ nav.scrolled {
 
 .tag {
   padding: 0.3rem 0.8rem;
-  background: rgba(255,255,255,0.05);
+  background: transparent;
   border-radius: 100px;
   font-size: 0.75rem;
   color: var(--text-secondary);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
 }
 
 /* Services Section */
@@ -434,7 +430,7 @@ nav.scrolled {
 
 .service-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   padding: 3rem 2rem;
   border-radius: 24px;
   text-align: center;
@@ -448,8 +444,8 @@ nav.scrolled {
 .service-card:hover {
   transform: translateY(-10px);
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px transparent;
 }
 
 .service-icon {
@@ -488,7 +484,7 @@ nav.scrolled {
 
 .skill-box {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   transition: var(--transition);
@@ -528,8 +524,8 @@ nav.scrolled {
 .skill-box:hover {
   transform: translateY(-10px);
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px transparent;
 }
 
 .skill-box h4 {
@@ -556,7 +552,7 @@ nav.scrolled {
 .tab-btn {
   padding: 0.8rem 1.5rem;
   background: white;
-  border: 1px solid #e2e8f0;
+  border: 1px solid transparent;
   border-radius: 12px;
   color: #64748b;
   font-weight: 600;
@@ -590,8 +586,8 @@ nav.scrolled {
   background: white;
   border-radius: 24px;
   padding: 3rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 30px transparent;
+  border: 1px solid transparent;
   min-height: 350px;
 }
 
@@ -611,8 +607,8 @@ nav.scrolled {
 }
 
 .skill-card-small {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border: 1px solid transparent;
   border-radius: 12px;
   padding: 1.2rem;
   display: flex;
@@ -639,7 +635,7 @@ nav.scrolled {
 .skill-card-small:hover {
   transform: translateY(-5px);
   background: white;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px transparent;
 }
 
 /* Skills Summary Badges */
@@ -661,8 +657,8 @@ nav.scrolled {
   font-size: 0.9rem;
   font-weight: 600;
   color: #1e293b;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 10px transparent;
+  border: 1px solid transparent;
 }
 
 .badge-item i {
@@ -722,7 +718,7 @@ nav.scrolled {
 .filter-btn {
   padding: 0.6rem 1.5rem;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: 100px;
   color: var(--text-secondary);
   cursor: pointer;
@@ -758,7 +754,7 @@ nav.scrolled {
   overflow: hidden;
   aspect-ratio: 4/3;
   cursor: pointer;
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   transition: var(--transition);
   scroll-snap-align: start;
 }
@@ -779,7 +775,7 @@ nav.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 15px transparent;
   transition: var(--transition);
   opacity: 0.8;
 }
@@ -818,7 +814,7 @@ nav.scrolled {
 .cert-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, transparent, transparent);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -839,7 +835,7 @@ nav.scrolled {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: transparent;
   z-index: 2000;
   display: none;
   align-items: center;
@@ -858,8 +854,8 @@ nav.scrolled {
   background: var(--bg-card);
   padding: 3.5rem;
   border-radius: 24px;
-  border: 1px solid var(--border);
-  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  border: 1px solid transparent;
+  box-shadow: 0 0 50px transparent;
   backdrop-filter: blur(15px);
 }
 
@@ -905,7 +901,7 @@ nav.scrolled {
   gap: 3rem;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid transparent;
 }
 
 .stat-item {
@@ -936,7 +932,7 @@ nav.scrolled {
   background: var(--bg-card);
   padding: 2rem;
   border-radius: 20px;
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   transition: var(--transition);
 }
 
@@ -973,7 +969,7 @@ nav.scrolled {
 }
 footer {
   padding: 4rem 0;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid transparent;
   text-align: center;
   color: var(--text-muted);
 }
@@ -1033,13 +1029,13 @@ footer {
   width: 380px;
   height: 500px;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: 24px;
   z-index: 3000;
   display: none;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 40px transparent;
   backdrop-filter: blur(20px);
 }
 
@@ -1051,7 +1047,7 @@ footer {
 .chat-header {
   padding: 1.5rem;
   background: rgba(99, 102, 241, 0.1);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid transparent;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -1095,7 +1091,7 @@ footer {
 
 .chat-footer {
   padding: 1rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid transparent;
 }
 
 .chat-options {
@@ -1113,7 +1109,7 @@ footer {
 
 .faq-item {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: 16px;
   overflow: hidden;
   transition: var(--transition);
@@ -1141,7 +1137,7 @@ footer {
 }
 
 .faq-item.active .faq-question {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid transparent;
   background: rgba(99, 102, 241, 0.05);
 }
 
@@ -1153,7 +1149,7 @@ footer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(0, 0, 0, 0.1);
+  background: transparent;
 }
 
 .faq-answer p {
@@ -1170,7 +1166,7 @@ footer {
 .opt-btn {
   padding: 0.5rem 1rem;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: 100px;
   color: var(--text-secondary);
   font-size: 0.8rem;
@@ -1195,7 +1191,7 @@ footer {
   background: var(--bg-card);
   padding: 2.5rem;
   border-radius: 24px;
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   position: relative;
   transition: var(--transition);
 }
@@ -1203,7 +1199,7 @@ footer {
 .testimonial-card:hover {
   border-color: var(--accent);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px transparent;
 }
 
 .quote-icon {
@@ -1251,7 +1247,7 @@ footer {
   text-align: center;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   border-radius: 20px;
   transition: var(--transition);
 }
@@ -1368,7 +1364,7 @@ footer {
   background: var(--bg-card);
   padding: 2rem;
   border-radius: 16px;
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   transition: var(--transition);
 }
 

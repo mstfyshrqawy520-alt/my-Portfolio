@@ -3,6 +3,422 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Learning Projects | Mostafa Elsharqawi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Mostafa<span class="accent-text">.AI</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">All Domains</a>
+        <a href="assets/files/Mostafa_Ali_CV%20.pdf.pdf" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;" download>Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" style="min-height: 40vh; display: flex; align-items: center; background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('dl_hero_image_1778011490568.png'); background-size: cover; background-position: center;">
+    <div class="container reveal">
+      <h1 style="font-size: clamp(2rem, 5vw, 3.5rem);">Deep <span class="accent-text">Learning</span> Projects</h1>
+      <p style="max-width: 600px; color: var(--text-secondary);">Neural networks, CNNs, and advanced architectures engineered for high-dimensional data processing.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="projects-grid">
+        <!-- Project 1: FruitGuard System -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/dl_fruit.png" alt="FruitGuard System" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">CV • YOLOv8 • PyQt5</span>
+            <h3>FruitGuard System</h3>
+            <p>Real-time fruit quality grading system. Multi-stage pipeline: detection (YOLOv8), classification (EfficientNet-B4), and size estimation — achieving sub-100ms inference.</p>
+            <div class="project-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">MLflow</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/FruitGuard-System" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="fruitguard" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Digit Gen VAE -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">Generative • VAE</span>
+            <h3>DigitGen VAE</h3>
+            <p>Variational Autoencoder (VAE) implemented for synthetic digit generation. Explores the latent space representation of the MNIST dataset.</p>
+            <div class="project-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">Latent Space</span>
+              <span class="tag">Deep Learning</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/-DigitGen-VAE-Latent-Space-Explorer" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="digitvae" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/dl_vae.png" alt="DigitGen VAE" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Project 3: CV Multitask -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/dl_multitask.png" alt="CV Multitask" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">HuggingFace • Multi-task</span>
+            <h3>CV Multitask Hub</h3>
+            <p>A unified pipeline for detection, classification, and segmentation using state-of-the-art models from the Hugging Face ecosystem.</p>
+            <div class="project-tags">
+              <span class="tag">Transformers</span>
+              <span class="tag">Vision</span>
+              <span class="tag">API</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/multi-task-computer-vision-huggingface" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="cvmultitask" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Gesture Launcher -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">Hand Tracking • Interaction</span>
+            <h3>AI Gesture Launcher</h3>
+            <p>Innovative system using hand tracking to launch applications and control desktop functions via real-time computer vision gestures.</p>
+            <div class="project-tags">
+              <span class="tag">MediaPipe</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">Python</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/linkedin-gesture-launcher-cv" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="gesturelauncher" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/dl_gesture.png" alt="Gesture Launcher" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Project 5: Object Tracking -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/dl_tracking.png" alt="Object Tracking" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">Deep SORT • Tracking</span>
+            <h3>Deep SORT Tracking</h3>
+            <p>Advanced multi-object tracking system combining detection with deep association metrics for robust object persistence across frames.</p>
+            <div class="project-tags">
+              <span class="tag">YOLOv8</span>
+              <span class="tag">Deep SORT</span>
+              <span class="tag">PyTorch</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/vehicle-and-pedestrian-detection-opencv" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="deepsort" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- More projects can be added here with the same structure -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">CV • ResNet50</span>
+            <h3>Grape Disease Detection</h3>
+            <p>Automated classification of grape leaves into healthy or diseased categories using a fine-tuned ResNet50 architecture.</p>
+            <div class="project-tags">
+              <span class="tag">Transfer Learning</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Agri-AI</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/grape-leaves-classification" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="grapeleaves" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/dl_grape.png" alt="Grape Disease Detection" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/dl_face_eye.png" alt="YOLOv8 Real-time" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">YOLOv8 • Real-time</span>
+            <h3>Real-time YOLOv8 Webcam</h3>
+            <p>High-speed object detection implementation optimized for webcam inference and edge deployment.</p>
+            <div class="project-tags">
+              <span class="tag">Ultralytics</span>
+              <span class="tag">Python</span>
+              <span class="tag">Real-time</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/real-time-face-eye-detection-opencv" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="yolov8webcam" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Mostafa Elsharqawi. Engineered for the future of AI.</p>
+    </div>
+  </footer>
+
+  <div id="info-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="info-modal-close">&times;</span>
+      <div id="project-details-content">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative AI Projects | Mostafa Elsharqawi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Mostafa<span class="accent-text">.AI</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">All Domains</a>
+        <a href="assets/files/Mostafa_Ali_CV%20.pdf.pdf" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;" download>Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" style="min-height: 40vh; display: flex; align-items: center; background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('genai_hero_image_new_1778011546459.png'); background-size: cover; background-position: center;">
+    <div class="container reveal">
+      <h1 style="font-size: clamp(2rem, 5vw, 3.5rem);">Generative <span class="accent-text">AI</span> Projects</h1>
+      <p style="max-width: 600px; color: var(--text-secondary);">State-of-the-art LLM fine-tuning, image generation, and creative AI agents engineered for the next generation of intelligence.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="projects-grid">
+        <!-- Project 1: LocalGPT -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/local_gpt.png" alt="LocalGPT" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">RAG • LLMs • Ollama</span>
+            <h3>LocalGPT</h3>
+            <p><strong>Fully Private Document Intelligence Platform</strong>. AI-powered system combining hybrid search, Late Chunking, and intelligent routing for on-premise RAG.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">LanceDB</span>
+              <span class="tag">LangChain</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/LocalGPT" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="localgpt" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: CV Fine-Tuning -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/fine.png" alt="CV Fine-tuning" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">Transfer Learning • Vision</span>
+            <h3>Fine-Tuning CV Models</h3>
+            <p>Advanced transfer learning on ResNet and Vision Transformers (ViT) backbones for specialized classification and detection tasks.</p>
+            <div class="project-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">ViT</span>
+              <span class="tag">ResNet</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/fine-tuning-computer-vision-models" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="cvfinetuning" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: VisionForge Diffusion -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">Diffusion • Stable Diffusion</span>
+            <h3>VisionForge Diffusion</h3>
+            <p>State-of-the-art image generation system utilizing Stable Diffusion pipelines for high-fidelity creative asset creation.</p>
+            <div class="project-tags">
+              <span class="tag">Diffusers</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Gradio</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/VisionForge-Diffusion" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="visionforge" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/gan.png" alt="Diffusion Visual" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Project 4: LLM Fine-tuning -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/gpt.png" alt="LLM Fine-tuning" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">LLM • Instruction Tuning</span>
+            <h3>Fine-Tuning GPT Models</h3>
+            <p>Domain-specific adaptation and instruction-tuning of Large Language Models to improve reasoning and contextual accuracy.</p>
+            <div class="project-tags">
+              <span class="tag">PEFT/LoRA</span>
+              <span class="tag">OpenAI</span>
+              <span class="tag">Transformers</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/llm-finetuning-gpt-transformers" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="llmfinetuning" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: AI Game Character Designer -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">Creative AI • Diffusion</span>
+            <h3>AI Game Character Designer</h3>
+            <p>Generative AI tool for creating unique game characters with detailed attributes and visual assets using Diffusion models.</p>
+            <div class="project-tags">
+              <span class="tag">Stable Diffusion</span>
+              <span class="tag">Gradio</span>
+              <span class="tag">GANs</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/ai-game-character-designer-gradio" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="gamedesigner" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/ai.png" alt="Game Designer" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Project 6: Foundation Models Explorer -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/foundation_models.png" alt="Foundation Models" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">Multimodal • Foundation Models</span>
+            <h3>Foundation Models Explorer</h3>
+            <p>Comprehensive exploration of multimodal foundation models (CLIP, BLIP, Segment Anything) for cross-domain AI applications.</p>
+            <div class="project-tags">
+              <span class="tag">CLIP</span>
+              <span class="tag">SAM</span>
+              <span class="tag">Zero-shot</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/foundation-models-multimodal-hf" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="foundation" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: Text-to-Speech Engine -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">Audio • Voice AI</span>
+            <h3>Text-to-Speech Engine</h3>
+            <p>High-fidelity audio generation pipelines and TTS fine-tuning for natural voice synthesis across multiple languages.</p>
+            <div class="project-tags">
+              <span class="tag">FastSpeech</span>
+              <span class="tag">Librosa</span>
+              <span class="tag">Transformers</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/text-to-speech-audio-generation" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="ttsaudio" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/tts.png" alt="TTS Engine" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Mostafa Elsharqawi. Engineered for the future of AI.</p>
+    </div>
+  </footer>
+
+  <div id="info-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="info-modal-close">&times;</span>
+      <div id="project-details-content">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Machine Learning Projects | Mostafa Elsharqawi</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -20,7 +436,7 @@
     </div>
   </nav>
 
-  <header class="hero" style="min-height: 40vh; display: flex; align-items: center; background: linear-gradient(rgba(10, 10, 20, 0.8), rgba(10, 10, 20, 0.8)), url('ml_hero_image_1778011196233.png'); background-size: cover; background-position: center;">
+  <header class="hero" style="min-height: 40vh; display: flex; align-items: center; background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('ml_hero_image_1778011196233.png'); background-size: cover; background-position: center;">
     <div class="container reveal">
       <h1 style="font-size: clamp(2rem, 5vw, 3.5rem);">Machine <span class="accent-text">Learning</span> Projects</h1>
       <p style="max-width: 600px; color: var(--text-secondary);">Predictive modeling, regression, and classification systems engineered for accuracy and explainability.</p>
@@ -230,6 +646,154 @@
       });
     }, { threshold: 0.1 });
 
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NLP & LLM Projects | Mostafa Elsharqawi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Mostafa<span class="accent-text">.AI</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#projects">All Domains</a>
+        <a href="assets/files/Mostafa_Ali_CV%20.pdf.pdf" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;" download>Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" style="min-height: 40vh; display: flex; align-items: center; background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('nlp_hero_image_1778011515511.png'); background-size: cover; background-position: center;">
+    <div class="container reveal">
+      <h1 style="font-size: clamp(2rem, 5vw, 3.5rem);">NLP & <span class="accent-text">LLM</span> Projects</h1>
+      <p style="max-width: 600px; color: var(--text-secondary);">Large Language Models, semantic understanding, and text generation systems built for the modern AI era.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="projects-grid">
+        
+        <!-- Project 1: Fake News -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/fake.png" alt="Fake News Detection" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">Text Classification • TF-IDF</span>
+            <h3>Fake News Detection</h3>
+            <p>A high-precision NLP pipeline using TF-IDF vectorization and Logistic Regression to detect misinformation with a real-time Streamlit interface.</p>
+            <div class="project-tags">
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">NLTK</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/fake-news-detection-nlp" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="fakenews" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Image Captioning -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">Multimodal • Transformer</span>
+            <h3>Image Captioning Systems</h3>
+            <p>Advanced multimodal architecture combining Vision Transformers with Language Models to generate descriptive and accurate text from visual data.</p>
+            <div class="project-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">Transformers</span>
+              <span class="tag">ViT</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/advanced-image-captioning-transformer" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="captioning" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/caption.png" alt="Image Captioning" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+        <!-- Project 3: Restaurant Sentiment -->
+        <div class="project-card reveal">
+          <div class="project-visual">
+            <img src="assets/res.png" alt="Sentiment Analysis" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="project-info">
+            <span class="tag">Sentiment Analysis • NLP</span>
+            <h3>Restaurant Review Analytics</h3>
+            <p>Semantic analysis pipeline designed to identify customer sentiment and key satisfaction drivers from large-scale restaurant review datasets.</p>
+            <div class="project-tags">
+              <span class="tag">Pandas</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">TextBlob</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/nlp-sentiment-analysis-restaurant-reviews" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="sentiment" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: HireMind AI -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <span class="tag">NLP • RAG • LLMs</span>
+            <h3>Hire-Mind AI</h3>
+            <p>Advanced AI recruitment platform using semantic search and RAG to match candidates with job descriptions. Features a real-time AI interview coach.</p>
+            <div class="project-tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">Semantic Search</span>
+            </div>
+            <div style="display: flex; gap: 1rem;">
+              <a href="https://github.com/mstfyshrqawy520-alt/HireMind-AI-Recruitment-System" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+              <button class="btn btn-outline project-more-btn" data-project="hiremind" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+            </div>
+          </div>
+          <div class="project-visual">
+            <img src="assets/hiremind_mockup.png" alt="HireMind AI" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Mostafa Elsharqawi. Engineered for the future of AI.</p>
+    </div>
+  </footer>
+
+  <div id="info-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="info-modal-close">&times;</span>
+      <div id="project-details-content">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 </body>
