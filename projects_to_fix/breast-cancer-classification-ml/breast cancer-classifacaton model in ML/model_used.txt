@@ -1,0 +1,6 @@
+# Breast Cancer Classification
+SVC --> 0.9737       
+Decision Tree Classifier --> 0.9386       
+Random Forest Classifier --> 0.9386       
+Extreme Gradient Boosting --> 0.9386       
+with balancing > without balancing
