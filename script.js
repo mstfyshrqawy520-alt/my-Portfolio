@@ -243,17 +243,97 @@ document.addEventListener('DOMContentLoaded', () => {
       tech: ['Docker', 'MLflow', 'AWS'],
       metrics: { 'Uptime': '99.9%', 'Scale': 'TB+', 'Deploy': 'Auto' },
       architecture: '<p>Domain: Infrastructure & Lifecycle Management.</p>'
+    },
+    breastcancer: {
+      title: 'Breast Cancer Detection Assistance',
+      description: 'High-precision diagnostic tool for breast cancer classification using clinical measurements.',
+      challenges: ['Optimizing diagnostic accuracy.', 'Building a secure inference API.', 'User-friendly clinical interface.'],
+      tech: ['Scikit-learn', 'FastAPI', 'Streamlit'],
+      metrics: { 'Accuracy': '97%+', 'Inference': '50ms', 'Precision': 'High' },
+      architecture: '<p>Workflow: Input → Preprocessing → Random Forest → Diagnostic Output.</p>'
+    },
+    glioma: {
+      title: 'Glioma Tumor Grading (LGG vs GBM)',
+      description: 'Clinical decision support system for grading brain tumors based on molecular markers.',
+      challenges: ['Handling imbalanced datasets (SMOTE).', 'Selecting significant genetic markers.', 'Clinician trust & usability.'],
+      tech: ['Scikit-learn', 'SMOTE', 'Streamlit', 'Pickle'],
+      metrics: { 'F1-Score': '0.94', 'Recall': '0.92', 'Latency': 'Real-time' },
+      architecture: '<p>Workflow: Genetic Markers → SMOTE Balancing → Ensemble Classifier → Grade Prediction.</p>'
+    },
+    grapeleaf: {
+      title: 'Grape Leaves Disease Identification',
+      description: 'Computer Vision system using ResNet50 for agricultural disease detection.',
+      challenges: ['Dataset diversity and noise.', 'Transfer Learning optimization.', 'Mobile-ready interface.'],
+      tech: ['TensorFlow', 'ResNet50', 'OpenCV', 'FastAPI'],
+      metrics: { 'Accuracy': '96%', 'Resolution': '224px', 'Inference': '120ms' },
+      architecture: '<p>CV Flow: Image Upload → ResNet50 Feature Extraction → Dense Classifier → Disease Label.</p>'
+    },
+    fakenews: {
+      title: 'Fake News Authenticity Verifier',
+      description: 'NLP pipeline for verifying the authenticity of news articles based on linguistic analysis.',
+      challenges: ['Complex linguistic nuances.', 'TF-IDF high dimensionality.', 'Processing speed for long text.'],
+      tech: ['NLTK', 'Scikit-learn', 'Logistic Regression', 'Streamlit'],
+      metrics: { 'Accuracy': '89%', 'Processing': 'Secs', 'Language': 'English' },
+      architecture: '<p>NLP Flow: Raw Text → Cleaning (Lemmatization) → TF-IDF → Logistic Regression → Result.</p>'
     }
   };
 
   const infoModal = document.getElementById('info-modal');
   const infoContent = document.getElementById('project-details-content');
+  // Use event delegation for info modal buttons
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.project-more-btn');
+    if (btn && infoModal && infoContent) {
+      const projectId = btn.dataset.project;
+      const data = projectData[projectId];
+      
+      if (data) {
+        // Build modal content
+        let techHtml = data.tech.map(t => `<span class="tag">${t}</span>`).join('');
+        let challengeHtml = data.challenges.map(c => `<li>${c}</li>`).join('');
+        let metricsHtml = Object.entries(data.metrics).map(([k, v]) => `
+          <div class="metric-item">
+            <span class="metric-val">${v}</span>
+            <span class="metric-label">${k}</span>
+          </div>
+        `).join('');
+
+        infoContent.innerHTML = `
+          <div class="modal-header">
+            <h3>${data.title}</h3>
+          </div>
+          <div class="modal-body">
+            <div class="modal-section">
+              <h4>Overview</h4>
+              <p>${data.description}</p>
+            </div>
+            <div class="modal-section">
+              <h4>Tech Stack</h4>
+              <div class="project-tags">${techHtml}</div>
+            </div>
+            <div class="modal-grid">
+              <div class="modal-section">
+                <h4>Key Challenges</h4>
+                <ul class="modal-list">${challengeHtml}</ul>
+              </div>
+              <div class="modal-section">
+                <h4>Performance</h4>
+                <div class="metrics-grid">${metricsHtml}</div>
+              </div>
+            </div>
+            <div class="modal-section">
+              <h4>System Architecture</h4>
+              <div class="architecture-flow">${data.architecture}</div>
+            </div>
+          </div>
+        `;
+        infoModal.classList.add('active');
+      }
+    }
+  });
+
   const infoClose = document.getElementById('info-modal-close');
 
-  const setupModalBtns = () => {
-    document.querySelectorAll('.project-more-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const project = projectData[btn.dataset.project];
         if (project) {
           infoContent.innerHTML = `
             <h2 style="margin-bottom: 1.5rem; color: var(--accent); font-size: 2.5rem;">${project.title}</h2>
@@ -395,6 +475,144 @@ document.addEventListener('DOMContentLoaded', () => {
         // Toggle current item
         if (!isActive) {
           item.classList.add('active');
+        }
+      });
+    });
+  }
+
+  // Domain Project Switcher Logic
+  const domainCards = document.querySelectorAll('.domain-card');
+  const domainContainer = document.getElementById('domain-projects-container');
+  const domainGrid = document.getElementById('domain-projects-grid');
+  const domainTitle = document.getElementById('domain-title');
+  const domainSubtitle = document.getElementById('domain-subtitle');
+  const domainFullLink = document.getElementById('domain-full-link');
+
+  const domainData = {
+    ml: {
+      title: 'Machine <span class="accent-text">Learning</span>',
+      subtitle: 'Predictive modeling, classification, and optimization projects using state-of-the-art algorithms.',
+      link: 'machine-learning.html',
+      projects: [
+        {
+          title: 'Breast Cancer Classification',
+          desc: 'High-precision diagnostic system using Random Forest with clinical measurements.',
+          tags: ['Scikit-learn', 'FastAPI', 'Streamlit'],
+          repo: 'https://github.com/mstfyshrqawy520-alt/breast-cancer-classification-ml',
+          id: 'breastcancer'
+        },
+        {
+          title: 'Glioma Tumor Grading',
+          desc: 'Clinical risk assessment tool for brain tumors using molecular markers and SMOTE.',
+          tags: ['Random Forest', 'SMOTE', 'Medical AI'],
+          repo: 'https://github.com/mstfyshrqawy520-alt/glioma-tumor-grading-ml',
+          id: 'glioma'
+        },
+        {
+          title: 'Credit Risk Analysis',
+          desc: 'Financial management system classifying bank customers into risk profiles.',
+          tags: ['XGBoost', 'Preprocessing', 'Finance'],
+          repo: 'https://github.com/mstfyshrqawy520-alt/credit-customers-risk-analysis',
+          id: 'creditrisk'
+        }
+      ]
+    },
+    dl: {
+      title: 'Deep <span class="accent-text">Learning</span>',
+      subtitle: 'Neural networks, CNNs, and advanced architectures for computer vision and regression.',
+      link: 'deep-learning.html',
+      projects: [
+        {
+          title: 'House Rent Prediction (ANN)',
+          desc: 'Deep Learning regression model built with TensorFlow to estimate real estate prices.',
+          tags: ['Keras', 'ANN', 'FastAPI'],
+          repo: 'https://github.com/mstfyshrqawy520-alt/House-Rent-Price-Prediction-ANN',
+          id: 'houserent'
+        },
+        {
+          title: 'Grape Leaves Classification',
+          desc: 'Computer vision system using ResNet50 for agricultural disease identification.',
+          tags: ['ResNet50', 'Computer Vision', 'CNN'],
+          repo: 'https://github.com/mstfyshrqawy520-alt/grape-leaves-classification',
+          id: 'grapeleaf'
+        }
+      ]
+    },
+    genai: {
+      title: 'Generative <span class="accent-text">AI</span>',
+      subtitle: 'LLM fine-tuning, RAG agents, and synthetic content generation systems.',
+      link: 'generative-ai.html',
+      projects: [
+        {
+          title: 'LocalGPT',
+          desc: 'Fully private document intelligence platform using Ollama and LanceDB.',
+          tags: ['Ollama', 'RAG', 'Next.js'],
+          repo: 'https://github.com/mstfyshrqawy520-alt/LocalGPT',
+          id: 'localgpt'
+        }
+      ]
+    },
+    nlp: {
+      title: 'NLP & <span class="accent-text">Audio</span>',
+      subtitle: 'Text analysis, speech understanding, and authenticity verification systems.',
+      link: 'nlp.html',
+      projects: [
+        {
+          title: 'Fake News Detection',
+          desc: 'NLP pipeline using TF-IDF and Logistic Regression to verify article authenticity.',
+          tags: ['NLTK', 'NLP', 'Scikit-learn'],
+          repo: 'https://github.com/mstfyshrqawy520-alt/fake-news-detection-nlp',
+          id: 'fakenews'
+        }
+      ]
+    }
+  };
+
+  if (domainCards.length > 0 && domainContainer) {
+    domainCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const domain = card.dataset.domain;
+        const data = domainData[domain];
+
+        if (data) {
+          // Update Content
+          domainTitle.innerHTML = data.title;
+          domainSubtitle.textContent = data.subtitle;
+          domainFullLink.href = data.link;
+
+          // Clear and Populate Grid
+          domainGrid.innerHTML = '';
+          data.projects.forEach(p => {
+            const projectCard = document.createElement('div');
+            projectCard.className = 'project-card reveal active';
+            projectCard.style.padding = '2rem';
+            projectCard.style.display = 'grid';
+            projectCard.style.gridTemplateColumns = '1fr';
+            projectCard.style.gap = '1.5rem';
+            
+            projectCard.innerHTML = `
+              <div class="project-info">
+                <div class="project-tags">
+                  ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+                </div>
+                <h3 style="font-size: 1.5rem;">${p.title}</h3>
+                <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">${p.desc}</p>
+                <div style="display: flex; gap: 1rem;">
+                  <a href="${p.repo}" target="_blank" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fab fa-github"></i> Repo</a>
+                  <button class="btn btn-outline project-more-btn" data-project="${p.id}" style="padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> Details</button>
+                </div>
+              </div>
+            `;
+            domainGrid.appendChild(projectCard);
+          });
+
+          // Show Container
+          domainContainer.style.display = 'block';
+          
+          // Re-trigger reveal animation logic for new cards
+          setTimeout(() => {
+            domainContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
         }
       });
     });
